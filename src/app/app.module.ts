@@ -7,13 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DogsComponent } from './dogs/dogs.component';
 import { DogDetailComponent } from './dog-detail/dog-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DogsComponent,
-    DogDetailComponent
+    DogDetailComponent,
+    NavbarComponent,
+    AboutUsComponent
  
   ],
   imports: [
