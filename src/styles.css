@@ -269,7 +269,7 @@ position: absolute;
 #specs td {
 	padding: 0 20px 0 5px
 }
-#amazonLink {
+#adoptButton {
 	background-color: gray;
 	color: white;
 	text-decoration: none;
@@ -277,7 +277,7 @@ position: absolute;
 	padding: 10px;
 	white-space: nowrap;
 }
-#amazonLink:hover {
+#adoptButton:hover {
 	background-color: dimgray;
 }
 .galleryItem {
@@ -322,11 +322,11 @@ position: absolute;
 #price {
 	color: #4CAF50;
 }
-#amazonLink {
+#adoptButton {
 	background-color: #4CAF50;
 	color: white;
 }
-#amazonLink:hover {
+#adoptButton:hover {
 	background-color: #388E3C;
 }
 

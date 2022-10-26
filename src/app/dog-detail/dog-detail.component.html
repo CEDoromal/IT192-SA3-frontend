@@ -1,19 +1,37 @@
+<app-navbar></app-navbar>
 <section *ngIf="dog" id="dog_item">
-
-    <div class="dogImageContainer"><img src="./dog-images/dog1.jpg" alt="Dog Image"></div>
-    
+    <!--<div class="dogImageContainer"><img src="./dog-images/dog1.jpg" alt="Dog Image"></div>-->
     <div>
       <h1>{{dog.name}}</h1>
 	  <br>
-      <a href="https://www.amazon.com/dp/B077578W38/" id="AdpotLink">Adopt</a>
+      <a id="adoptButton">Apply for Adoption</a>
 	  <br><br>
       <h3>About this dog</h3>
-      <ul>
-        <li>Breed: <input type="text" name="breed" value = "{{dog.breed}}"></li>
-        <li><span>The device does not come with headphones or a SIM card. It does include a charger and charging cable that may be generic, in which case it will be UL or Mfi (Made for iPhone) Certified.</span></li>
-        <li><span>Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arms length.</span></li>
-        <li><span>Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.</span></li>
-        <li><span>Tested for battery health and guaranteed to have a minimum battery capacity of 80%.</span></li>
-      </ul>
+      <table id="specs">
+	    <tr>
+		  <th>Name</th>
+		  <td><input type="text" name="name" value="{{dog.name}}"></td>
+	    </tr>
+	    <tr>
+          <th>Breed</th>
+          <td><input type="text" name="breed" value="{{dog.breed}}"></td>
+        </tr>
+	    <tr>
+	      <th>Age</th>
+	      <td><input type="number" name="age" value="{{dog.age}}"></td>
+        </tr>
+	    <tr>
+	      <th>Color</th>
+	      <td><input type="text" name="color" value="{{dog.color}}"></td>
+        </tr>
+        <tr>
+          <th>Vaccinated</th>
+          <td><input type="text" name="vaccinated" value="{{dog.vaccinated}}"></td>
+        </tr>
+        <tr>
+          <th>Traits</th>
+          <td><input type="text" name="traits" value="{{dog.traits}}"></td>
+        </tr>
+      </table>
     </div>
   </section>
