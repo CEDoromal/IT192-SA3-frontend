@@ -5,7 +5,8 @@
 
 /*layout.css*/
 body{
-	background-image: url("./app/images/bgpaws.png");
+	background-color: #F7882F ;
+	background-image: url("./app/images/bgpaws2.png");
 }
 .mainWrapper {
     background-color: white;
@@ -108,7 +109,7 @@ body{
 	grid-gap: 10px;
 	text-decoration: none;
 	color: black;
-	background-image: url("/Images/bgpaws.png")
+	background-image: url("/Images/bgpaws2.png")
 }
 .dog:hover {
 	box-shadow: 1px 1px 5px 2.5px rgba(0, 0, 0, 0.15);
@@ -294,7 +295,7 @@ body{
     font-family: Roboto, Calibri, Sans-Serif;
 }
 .horizontalNavBar>ul  {
-    background-image: linear-gradient(to right, #FF9800 60%, #4CAF50);
+    background-image: linear-gradient(to right, #6B7A8F 20%, #DCC7AA);
 }
 .horizontalNavBar>ul>li>a {
     color: white;
