@@ -1,7 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Petdog } from '../model/petdog';
-import { PetdogService } from '../service/petdogservice';
+import { Dog } from '../model/dog';
+import { DogService } from '../service/dogservice';
 
 @Component({
   selector: 'app-dogs',
@@ -9,35 +9,35 @@ import { PetdogService } from '../service/petdogservice';
   styleUrls: ['./dogs.component.css']
 })
 export class DogsComponent implements OnInit {
-  dogs: Petdog[] = [];
+  dogs: Dog[] = [];
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  constructor(private petdogService: PetdogService) { }
+  constructor(private dogService: DogService) { }
 
   ngOnInit(): void {
     this.getDogs();
   }
 
   getDogs(): void {
-    this.petdogService.getDogs()
+    this.dogService.getDogs()
     .subscribe(dogs => this.dogs = dogs);
   }
 
   add(name: string, breed: string, age: number, color: string, vaccinated: string,traits: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.petdogService.addPetdog({ name, breed, age, color, vaccinated, traits } as Petdog)
+    this.dogService.addDog({ name, breed, age, color, vaccinated, traits } as Dog)
       .subscribe(dog => {
         this.dogs.push(dog);
       });
       
   }
 
-  delete(dog: Petdog): void {
+  delete(dog: Dog): void {
     this.dogs = this.dogs.filter(h => h !== dog);
-    this.petdogService.deleteDog(dog.id).subscribe();
+    this.dogService.deleteDog(dog.id).subscribe();
   }
 
 }

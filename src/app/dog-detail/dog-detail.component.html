@@ -1,0 +1,18 @@
+<section *ngIf="dog" id="dog_item">
+    <div class="dogImageContainer"><img src="./dog-images/dog1.jpg" alt="Dog Image"></div>
+    <div>
+      <h1>{{dog.name}}</h1>
+      <h4>Price: <span id="price">$329.99</span></h4>
+	  <br>
+      <a href="https://www.amazon.com/dp/B077578W38/" id="amazonLink">Get it on Amazon</a>
+	  <br><br>
+      <h3>About this dog</h3>
+      <ul>
+        <li>Breed: <input type="text" name="breed" value = "{{dog.breed}}"></li>
+        <li><span>The device does not come with headphones or a SIM card. It does include a charger and charging cable that may be generic, in which case it will be UL or Mfi (Made for iPhone) Certified.</span></li>
+        <li><span>Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arms length.</span></li>
+        <li><span>Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.</span></li>
+        <li><span>Tested for battery health and guaranteed to have a minimum battery capacity of 80%.</span></li>
+      </ul>
+    </div>
+  </section>

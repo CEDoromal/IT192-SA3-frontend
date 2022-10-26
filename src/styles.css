@@ -1,1 +1,346 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/*TEMPORARY (replaced "product" with "dog"*/
+
+/*layout.css*/
+body{
+	background-color: black;
+}
+.mainWrapper {
+	background-color: white;
+    display: grid;
+    grid-template-columns: 100%;
+	grid-gap: 15px;
+	padding: 15px 0;
+	margin: 15px 15vmin;
+}
+.mainWrapper>header {
+    margin: auto;
+}
+.mainWrapper .logo-container {
+	width: 25vmin;
+}
+.horizontalNavBar>ul  {
+    background-color: gray;
+    list-style-type: none;
+	margin: 0;
+	padding: 0 15px;
+	overflow: hidden;
+}
+.horizontalNavBar>ul>li {
+    float: left;
+}
+.horizontalNavBar>ul>li>a {
+    display: block;
+    color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+.horizontalNavBar>ul>li>a:hover {
+    background-color: dimgray;
+}
+.dropdown {
+	display:inline-block;
+}
+.dropContent {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 120px;
+	box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.15);
+	z-index: 1;
+}
+.dropContent>a {
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropContent>a:hover {
+	background-color: #f1f1f1;
+}
+.dropdown:hover>.dropContent {
+	display: block;
+}
+
+
+.mainWrapper>section {
+    padding: 10px 25px;
+    display: grid;
+}
+.mainWrapper>footer
+{
+	text-align: center;
+	font-size: 0.7em;
+	color: gray;
+}
+
+/*About Us Page*/
+#about-us {
+    grid-template-columns: auto 1fr;
+	grid-gap: 20px;
+}
+#about-us>.logo-container {
+    width: 25vmin;
+}
+
+/*dogs Page*/
+#dogs {
+	grid-gap: 10px
+}
+#dogs>div>h1 {
+	margin: 0;
+}
+.dogsContainer {
+	padding: 10px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-auto-flow: row dense;
+}
+.dog {
+	border: 1px solid gray;
+	padding: 10px;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-gap: 10px;
+	text-decoration: none;
+	color: black;
+	background-color: white;
+}
+.dog:hover {
+	box-shadow: 1px 1px 5px 2.5px rgba(0, 0, 0, 0.15);
+}
+.dogThumbnail {
+	width: 100%;
+	height: 15vmin;
+	object-fit: scale-down;
+	display: block;
+	margin: auto;
+}
+.dogName {
+	padding: 5px;
+	text-align: center;
+}
+
+/*Gallery Page*/
+#gallery {
+	grid-gap: 10px
+}
+#gallery>div>h1 {
+	margin: 0;
+}
+.imageGrid {
+	padding: 10px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-auto-flow: row dense;
+	background-color: #F5F5F5;
+	border-radius: 6px;
+}
+.imageGrid>a {
+	margin: auto;
+}
+.imageGrid>a>img {
+	width: 100%;
+	object-fit: scale-down;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 150ms;
+}
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 6px;
+	width: 30vmin;
+	position: relative;
+	transition: all 150ms ease-in-out;
+}
+.popup>.close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: dimgray;
+}
+.popup>.close:hover {
+	color: gray;
+}
+.popupImageContainer>img {
+	width: 100%;
+	object-fit: contain;
+}
+
+/*Testimonials Page*/
+.quoteList {
+	display: grid;
+}
+.quoteList>div {
+	margin: 0 2em;
+}
+
+/*Contact Us Page*/
+#contact-us {
+	grid-gap: 10px;
+}
+#contact-us>div>h1 {
+	margin: 0;
+}
+.contactsContainer, #email, #recipient, #emailContent, #suggestionContent {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.contactsContainer {
+	padding: 15px;
+	background-color: #F5F5F5;
+}
+#emailContent, #suggestionContent {
+	font-family: inherit;
+	font-size: inherit;
+	resize: none;
+}
+.submitButton {
+	width: 10%;
+	background-color: gray;
+	color: white;
+	padding: 14px;
+	margin: 8px 0 0 0;
+	border: none;
+	border-radius: inherit;
+	cursor: pointer;
+	float: right;
+}
+.submitButton:hover {
+	background-color: dimgray;
+}
+.contactsContainer>iframe {
+	width: 100%;
+	border-radius: inherit;
+}
+
+/*dog Item Page*/
+#dog_item {
+	grid-template-columns: 25% 1fr;
+	grid-gap: 20px;
+	padding: 15px 50px;
+}
+.dogImageContainer {
+	margin: 0 auto;
+}
+.dogImageContainer>img {
+	max-width: 100%;
+}
+#specs {
+	margin: 0 auto;
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 90%;
+}
+#specs th {
+	text-align: left;
+	padding: 0 5px;
+}
+#specs td {
+	padding: 0 20px 0 5px
+}
+#amazonLink {
+	background-color: gray;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	white-space: nowrap;
+}
+#amazonLink:hover {
+	background-color: dimgray;
+}
+.galleryItem {
+}
+
+
+
+
+
+
+/*orange_theme.css*/
+/*body {
+	background-image: url("leaves.png"), url("background.jpg");
+	background-size: 200px, auto;
+}*/
+.mainWrapper {
+    font-family: Roboto, Calibri, Sans-Serif;
+}
+.horizontalNavBar>ul  {
+    background-image: linear-gradient(to right, #FF9800 60%, #4CAF50);
+}
+.horizontalNavBar>ul>li>a {
+    color: white;
+}
+.horizontalNavBar>ul>li>a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.submitButton {
+	background-color: #4CAF50;
+	color: white;
+}
+.submitButton:hover {
+	background-color: #388E3C;
+}
+
+
+.dog {
+	border-radius: 10px;
+}
+
+#price {
+	color: #4CAF50;
+}
+#amazonLink {
+	background-color: #4CAF50;
+	color: white;
+}
+#amazonLink:hover {
+	background-color: #388E3C;
+}
+
+/*div {
+	border: 1px solid red;
+	outline: 1px solid black;
+}
+
+a {
+	border: 1px dashed green;
+	outline: 1px dashed blue;
+}*/
+
+
+
+/*NEW ADDITIONS*/
+section {
+    padding: 10px 25px;
+    display: grid;
+}

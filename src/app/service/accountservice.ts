@@ -4,12 +4,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 
 @Injectable ({providedIn: 'root'})
-export class accountService {
+export class AccountService {
     accountUrl: string
 
   constructor(private http: HttpClient) {
 
-    this.accountUrl = 'http://localhost:18080/account/';
+    this.accountUrl = '/api/account';
 
   }
 
