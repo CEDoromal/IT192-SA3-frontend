@@ -5,10 +5,10 @@
 
 /*layout.css*/
 body{
-	background-image: url("/Images/bgpaws.png");
+	background-image: url("./app/images/bgpaws.png");
 }
 .mainWrapper {
-	background-image: url("/Images/bgpaws.png");
+    background-color: white;
     display: grid; 
     grid-template-columns: 100%;
 	grid-gap: 15px;
