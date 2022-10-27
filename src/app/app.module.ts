@@ -10,6 +10,7 @@ import { DogDetailComponent } from './dog-detail/dog-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginComponent } from './login/login.component';
+import { NewDogComponent } from './new-dog/new-dog.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     DogDetailComponent,
     NavbarComponent,
     AboutUsComponent,
-    LoginComponent
+    LoginComponent,
+    NewDogComponent
  
   ],
   imports: [

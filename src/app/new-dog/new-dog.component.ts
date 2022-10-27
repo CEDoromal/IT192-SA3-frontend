@@ -5,17 +5,17 @@ import { Dog } from '../model/dog';
 import { DogService } from '../service/dogservice';
 import { AccountService } from '../service/accountservice';
 import { Account } from '../model/account';
+import { DogsComponent } from '../dogs/dogs.component';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-dog-detail',
-  templateUrl: './dog-detail.component.html',
-  styleUrls: ['./dog-detail.component.css']
+  selector: 'app-new-dog',
+  templateUrl: './new-dog.component.html',
+  styleUrls: ['./new-dog.component.css']
 })
-export class DogDetailComponent implements OnInit {
+export class NewDogComponent implements OnInit {
 
   isAdmin: boolean = false;
-  dog: Dog | undefined;
 
   constructor(
     private accountService: AccountService,
@@ -31,24 +31,21 @@ export class DogDetailComponent implements OnInit {
     } else {
       this.isAdmin = this.accountService.loggedAccount.admin;
     }
-    this.getDog();
   }
 
-  getDog(): void {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.dogService.getDog(id)
-      .subscribe(dog => this.dog = dog)
-  }
-
-  save(): void {
-    if (this.dog) {
-      this.dogService.updateDog(this.dog)
-        .subscribe(() => this.goBack());
-    }
+  add(name: string, breed: string, age: number, color: string, vaccinated: string,traits: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    console.log(this.dogService.addDog({ name, breed, age, color, vaccinated, traits } as Dog)
+      .subscribe(() => this.goBack()));
+    //this.router.navigate(["/dogs"]);
   }
 
   goBack(): void {
     this.location.back();
   }
 
+  toNum(input: string): number {
+    return Number(input);
+  }
 }

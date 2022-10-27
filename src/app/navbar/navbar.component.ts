@@ -14,7 +14,6 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(): void {
-    console.log(this.accountService.loggedAccount);
     this.accountService.loggedAccount = undefined;
   }
 }
