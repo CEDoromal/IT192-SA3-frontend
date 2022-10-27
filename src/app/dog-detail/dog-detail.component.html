@@ -1,36 +1,64 @@
 <app-navbar></app-navbar>
 <section *ngIf="dog" id="dog_item">
-    <!--<div class="dogImageContainer"><img src="./dog-images/dog1.jpg" alt="Dog Image"></div>-->
+    <div class="dogImageContainer"><img src="https://m.media-amazon.com/images/I/71ar35igrrL.png" alt="Dog Image"></div>
     <div>
       <h1>{{dog.name}}</h1>
 	  <br>
-      <a id="adoptButton">Apply for Adoption</a>
+      <a *ngIf="!isAdmin" id="applyButton">Apply for Adoption</a>
+      <a *ngIf="isAdmin" (click)="save()" id="applyButton">Apply</a>
 	  <br><br>
       <h3>About this dog</h3>
-      <table id="specs">
+      <table *ngIf="isAdmin" id="specs">
 	    <tr>
 		  <th>Name</th>
-		  <td><input type="text" name="name" value="{{dog.name}}"></td>
+		  <td><input [(ngModel)]="dog.name" type="text" name="name"></td>
 	    </tr>
 	    <tr>
           <th>Breed</th>
-          <td><input type="text" name="breed" value="{{dog.breed}}"></td>
+          <td><input [(ngModel)]="dog.breed" type="text" name="breed"></td>
         </tr>
 	    <tr>
 	      <th>Age</th>
-	      <td><input type="number" name="age" value="{{dog.age}}"></td>
+	      <td><input [(ngModel)]="dog.age" type="number" name="age"></td>
         </tr>
 	    <tr>
 	      <th>Color</th>
-	      <td><input type="text" name="color" value="{{dog.color}}"></td>
+	      <td><input [(ngModel)]="dog.color" type="text" name="color"></td>
         </tr>
         <tr>
           <th>Vaccinated</th>
-          <td><input type="text" name="vaccinated" value="{{dog.vaccinated}}"></td>
+          <td><input [(ngModel)]="dog.vaccinated" type="text" name="vaccinated"></td>
         </tr>
         <tr>
           <th>Traits</th>
-          <td><input type="text" name="traits" value="{{dog.traits}}"></td>
+          <td><input [(ngModel)]="dog.traits" type="text" name="traits"></td>
+        </tr>
+      </table>
+
+      <table *ngIf="!isAdmin" id="specs">
+	    <tr>
+		  <th>Name</th>
+		  <td>{{dog.name}}</td>
+	    </tr>
+	    <tr>
+          <th>Breed</th>
+          <td>{{dog.breed}}</td>
+        </tr>
+	    <tr>
+	      <th>Age</th>
+	      <td>{{dog.age}}</td>
+        </tr>
+	    <tr>
+	      <th>Color</th>
+	      <td>{{dog.color}}</td>
+        </tr>
+        <tr>
+          <th>Vaccinated</th>
+          <td>{{dog.vaccinated}}</td>
+        </tr>
+        <tr>
+          <th>Traits</th>
+          <td>{{dog.traits}}</td>
         </tr>
       </table>
     </div>

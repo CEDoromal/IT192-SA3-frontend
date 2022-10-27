@@ -1,4 +1,4 @@
 export class Account {
-    username: string = ' '
-    isAdmin: boolean = false
+    username: string = ' ';
+    admin: boolean = false;
 }

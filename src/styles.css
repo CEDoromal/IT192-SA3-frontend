@@ -255,10 +255,10 @@ position: absolute;
 	max-width: 100%;
 }
 #specs {
-	margin: 0 auto;
+	margin: 0 auto 0 0;
 	border-collapse: collapse;
 	table-layout: fixed;
-	width: 90%;
+	width: 30%;
 }
 #specs th {
 	text-align: left;
@@ -267,7 +267,7 @@ position: absolute;
 #specs td {
 	padding: 0 20px 0 5px
 }
-#adoptButton {
+#applyButton {
 	background-color: gray;
 	color: white;
 	text-decoration: none;
@@ -275,10 +275,8 @@ position: absolute;
 	padding: 10px;
 	white-space: nowrap;
 }
-#adoptButton:hover {
+#applyButton:hover {
 	background-color: dimgray;
-}
-.galleryItem {
 }
 
 
@@ -320,11 +318,11 @@ position: absolute;
 #price {
 	color: #4CAF50;
 }
-#adoptButton {
+#applyButton {
 	background-color: #4CAF50;
 	color: white;
 }
-#adoptButton:hover {
+#applyButton:hover {
 	background-color: #388E3C;
 }
 

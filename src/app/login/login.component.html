@@ -1,15 +1,17 @@
 <div class="form">
     <div class="formbox">
       <div class="formleft">
+        <img src="./assets/images/PawDoption.png" width="100%">
       </div>
       <div class="formright">
         <div class="formpadding-right">
           <form>
-            <h1 class="formtitle">Doge Login</h1>
-            <input class="formemail" type="text" placeholder="username"/>
-            <input class="formsubmit-btn" type="submit" value="Login"/>
+            <h1 class="formtitle">PawDoption Login</h1>
+            <input #usernameField class="formemail" type="text" placeholder="username"/>
+            <input (click)="login(usernameField.value)" type="submit" value="Login" class="formsubmit-btn"/>
+            <!--<span style="font-size: 0.7em; text-align: right;">{{state}}</span>-->
           </form>
-          <p><a class="formlink" href="#">Create your account</a></p>
+          <!--<p><a class="formlink" href="#">Create your account</a></p>-->
       </div>
     </div>
-  </div>
+</div>

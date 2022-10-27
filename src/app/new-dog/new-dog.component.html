@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<section id="dog_item">
+    <div class="dogImageContainer"><img src="https://m.media-amazon.com/images/I/71ar35igrrL.png" alt="Dog Image"></div>
+    <div>
+      <h1>New Dog</h1>
+	  <br>
+      <a id="applyButton" type="button" class="add-button" (click)="add(dogName.value, dogBreed.value, toNum(dogAge.value), dogColor.value, dogVaccinated.value, dogTraits.value)">
+        Add Dog
+      </a>
+	  <br><br>
+      <h3>Details</h3>
+      <table id="specs">
+	    <tr>
+		  <th>Name</th>
+		  <td><input #dogName type="text" name="name"></td>
+	    </tr>
+	    <tr>
+          <th>Breed</th>
+          <td><input #dogBreed type="text" name="breed"></td>
+        </tr>
+	    <tr>
+	      <th>Age</th>
+	      <td><input #dogAge type="number" name="age"></td>
+        </tr>
+	    <tr>
+	      <th>Color</th>
+	      <td><input #dogColor type="text" name="color"></td>
+        </tr>
+        <tr>
+          <th>Vaccinated</th>
+          <td><input #dogVaccinated type="text" name="vaccinated"></td>
+        </tr>
+        <tr>
+          <th>Traits</th>
+          <td><input #dogTraits type="text" name="traits"></td>
+        </tr>
+      </table>
+    </div>
+  </section>

@@ -2,6 +2,8 @@ import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Dog } from '../model/dog';
 import { DogService } from '../service/dogservice';
+import { AccountService } from '../service/accountservice';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dogs',
@@ -9,14 +11,23 @@ import { DogService } from '../service/dogservice';
   styleUrls: ['./dogs.component.css']
 })
 export class DogsComponent implements OnInit {
+  isAdmin: boolean = false;
   dogs: Dog[] = [];
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  constructor(private dogService: DogService) { }
+  constructor(
+    private dogService: DogService, 
+    private accountService: AccountService,
+    private router: Router) { }
 
   ngOnInit(): void {
+    if (this.accountService.loggedAccount == undefined) {
+      //this.router.navigate(['/login']);
+    } else {
+      this.isAdmin = this.accountService.loggedAccount.admin;
+    }
     this.getDogs();
   }
 
