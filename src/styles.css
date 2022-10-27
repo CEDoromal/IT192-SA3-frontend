@@ -255,10 +255,10 @@ position: absolute;
 	max-width: 100%;
 }
 #specs {
-	margin: 0 auto;
+	margin: 0 auto 0 0;
 	border-collapse: collapse;
 	table-layout: fixed;
-	width: 90%;
+	width: 30%;
 }
 #specs th {
 	text-align: left;

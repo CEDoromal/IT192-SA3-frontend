@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, destroyPlatform, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { delay } from 'rxjs';
+
+import { AccountService } from '../service/accountservice';
 
 
 @Component({
@@ -8,9 +12,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  state: string = "";
+
+  constructor(
+    private accountService: AccountService,
+    private router: Router
+    ) {}
 
   ngOnInit(): void {
   }
 
+  login(username: string): void {
+    this.accountService.getAccount(username)
+      .subscribe(account => this.accountService.loggedAccount = account);
+    if (this.accountService.loggedAccount) {
+      this.router.navigate(['/about-us']);
+    } else [
+      this.state = "login failed"
+    ]
+  }
 }
