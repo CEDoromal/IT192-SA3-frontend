@@ -2,11 +2,13 @@
 <section id="dogs">
     <div><h1>Dogs</h1></div>
     <div class="dogsContainer"> 
-	    <a *ngFor="let dog of dogs" routerLink="/dogs/{{dog.id}}" class="dog">
-   	    <img src="https://m.media-amazon.com/images/I/71ar35igrrL.png" class="dogThumbnail">
-        <div class="dogName">{{dog.name}} ({{dog.breed}})</div>
+      <div *ngFor="let dog of dogs" class="dog">
+	      <a routerLink="/dogs/{{dog.id}}">
+   	      <img src="https://m.media-amazon.com/images/I/71ar35igrrL.png" class="dogThumbnail">
+          <div class="dogName">{{dog.name}} ({{dog.breed}})</div>
+        </a>
         <button *ngIf="isAdmin" (click)="delete(dog)" type="button" class="delete" title="Delete Dog">X</button>
-      </a>
+      </div>
       <a *ngIf="isAdmin" routerLink="/new-dog" class="dog">
        <div class="dogName">New Dog</div>
       </a>
