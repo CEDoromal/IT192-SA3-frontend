@@ -2,9 +2,11 @@
 <section id="dogs">
     <div><h1>Dogs</h1></div>
     <div class="dogsContainer"> 
-	    <a *ngFor="let dog of dogs" routerLink="/dogs/{{dog.id}}" class="dog">
-   	    <!--<img src="./products/product-images/product1.jpg" alt="Product 1 Thumbnail" class="productThumbnail">-->
-        <div class="dogName">{{dog.name}} ({{dog.breed}})</div>
-	    </a>
+      <div *ngFor="let dog of dogs">
+	      <a  routerLink="/dogs/{{dog.id}}" class="dog">
+   	      <!--<img src="./products/product-images/product1.jpg" alt="Product 1 Thumbnail" class="productThumbnail">-->
+          <div class="dogName">{{dog.name}} ({{dog.breed}})</div>
+	      </a>
+      </div>
     </div>
 </section>
