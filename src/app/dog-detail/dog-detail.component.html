@@ -5,7 +5,7 @@
       <h1>{{dog.name}}</h1>
 	  <br>
       <a *ngIf="!isAdmin" id="applyButton">Apply for Adoption</a>
-      <a *ngIf="isAdmin" id="applyButton">Apply</a>
+      <a *ngIf="isAdmin" (click)="save()" id="applyButton">Apply</a>
 	  <br><br>
       <h3>About this dog</h3>
       <table *ngIf="isAdmin" id="specs">
@@ -15,23 +15,23 @@
 	    </tr>
 	    <tr>
           <th>Breed</th>
-          <td><input [(ngModel)]="dog.breed" type="text" name="breed" value="{{dog.breed}}"></td>
+          <td><input [(ngModel)]="dog.breed" type="text" name="breed"></td>
         </tr>
 	    <tr>
 	      <th>Age</th>
-	      <td><input [(ngModel)]="dog.age" type="number" name="age" value="{{dog.age}}"></td>
+	      <td><input [(ngModel)]="dog.age" type="number" name="age"></td>
         </tr>
 	    <tr>
 	      <th>Color</th>
-	      <td><input [(ngModel)]="dog.color" type="text" name="color" value="{{dog.color}}"></td>
+	      <td><input [(ngModel)]="dog.color" type="text" name="color"></td>
         </tr>
         <tr>
           <th>Vaccinated</th>
-          <td><input [(ngModel)]="dog.vaccinated" type="text" name="vaccinated" value="{{dog.vaccinated}}"></td>
+          <td><input [(ngModel)]="dog.vaccinated" type="text" name="vaccinated"></td>
         </tr>
         <tr>
           <th>Traits</th>
-          <td><input [(ngModel)]="dog.traits" type="text" name="traits" value="{{dog.traits}}"></td>
+          <td><input [(ngModel)]="dog.traits" type="text" name="traits"></td>
         </tr>
       </table>
 

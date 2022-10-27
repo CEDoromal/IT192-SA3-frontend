@@ -26,7 +26,7 @@ export class DogService {
   }
   
   public addDog(dog: Dog): Observable<Dog> {
-    return this.http.post<Dog>(this.dogUrl + "/add-dog", JSON.stringify(dog), this.httpOptions);
+    return this.http.post<Dog>(this.dogUrl + "/add-dog", dog, this.httpOptions);
   }
 
   public deleteDog(id: number): Observable<Dog> {
@@ -35,7 +35,7 @@ export class DogService {
   }
 
   public updateDog(dog: Dog): Observable<any> {
-    return this.http.put(this.dogUrl + "/update-dog", Dog, this.httpOptions);
+    return this.http.put(this.dogUrl + "/update-dog", dog, this.httpOptions);
   }
 
   

@@ -43,7 +43,7 @@ export class DogDetailComponent implements OnInit {
   save(): void {
     if (this.dog) {
       this.dogService.updateDog(this.dog)
-        .subscribe(() => this.goBack());
+        .subscribe(()=> this.goBack());
     }
   }
 
