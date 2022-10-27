@@ -24,7 +24,7 @@ export class DogsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.accountService.loggedAccount == undefined) {
-      //this.router.navigate(['/login']);
+      this.router.navigate(['/login']);
     } else {
       this.isAdmin = this.accountService.loggedAccount.admin;
     }
