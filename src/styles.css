@@ -9,16 +9,15 @@ body{
 	background-image: url("./app/images/bgpaws2.png");
 }
 .mainWrapper {
-    background-color: rgba(255, 213, 174, 0.89);
+    background-color: rgba(255, 230, 200, 0.95);
     display: grid; 
     grid-template-columns: 100%;
 	grid-gap: 15px;
 	padding: 15px 0;
 	margin: 15px 15vmin;
 }
-h1 {
+#smallLogo {
 position: absolute;
-
 }
 
 .mainWrapper .logo-container {
