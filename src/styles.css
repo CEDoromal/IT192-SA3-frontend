@@ -9,7 +9,7 @@ body{
 	background-image: url("./assets/images/bgpaws2.png");
 }
 .mainWrapper {
-    background-color: rgba(255, 230, 200, 0.95);
+    background-color: rgba(255, 230, 200, 0.897);
     display: grid; 
     grid-template-columns: 100%;
 	grid-gap: 15px;
